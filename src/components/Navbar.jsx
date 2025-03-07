@@ -36,8 +36,8 @@ const Navbar = () => {
       data.success && setIsLoggedin(false);
       data.success && setUserData(false);
 
-      if (data.success && setIsLoggedin === false) {
-        navigate("/");
+      if (setIsLoggedin === false) {
+        navigate("/login");
         toast.success(data.message);
       } else {
         toast.error(data.message);
