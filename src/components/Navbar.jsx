@@ -81,35 +81,6 @@ const Navbar = () => {
           Login <img src={assets.arrow_icon} alt="" />
         </button>
       )}
-
-      {setIsLoggedin ? (
-        <button
-          onClick={() => navigate("/login")}
-          className="flex items-center gap-2 border border-gray-500 rounded-full px-6 py-2 text-gray-800 hover:bg-gray-200 transition-all"
-        >
-          Login <img src={assets.arrow_icon} alt="" />
-        </button>
-      ) : (
-        <div className="absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-10">
-          <ul className="list-none m-0 p-2 bg-gray-100 text-sm">
-            {!userData.isAccountVerified && (
-              <li
-                onClick={sendVerificationOtp}
-                className="py-1 px-2 hover:bg-gray-200 cursor-pointer"
-              >
-                Verify Email
-              </li>
-            )}
-
-            <li
-              onClick={logout}
-              className="py-1 px-2 hover:bg-gray-200 pr-10 cursor-pointer"
-            >
-              Logout
-            </li>
-          </ul>
-        </div>
-      )}
     </div>
   );
 };
